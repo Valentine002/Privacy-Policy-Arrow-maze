@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy · Arrow Maze</title>
+  <style>
+    :root {
+      --bg-body: #0f111a;
+      --bg-card: #171a25;
+      --bg-elevated: #1f2333;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent-blue: #3b82f6;
+      --accent-purple: #a855f7;
+      --border-color: #2a2f42;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 2rem 1rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .policy-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--bg-card);
+      border-radius: 28px;
+      padding: 2.8rem 2.4rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle top glow matching the app logo */
+    .policy-card::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 150px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 500px) {
+      .policy-card {
+        padding: 2rem 1.4rem;
+        border-radius: 20px;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .policy-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .app-badge {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.15));
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      font-weight: 600;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      color: #bfdbfe;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .last-updated {
+      background: var(--bg-elevated);
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .intro-msg {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      background: rgba(59, 130, 246, 0.05);
+      padding: 1.2rem 1.6rem;
+      border-radius: 16px;
+      border-left: 4px solid var(--accent-blue);
+      color: #cbd5e1;
+    }
+
+    .intro-msg strong {
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 2.4rem 0 0.8rem 0;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+    }
+
+    h2::before {
+      content: "▶";
+      font-size: 0.8rem;
+      color: var(--accent-blue);
+      margin-right: 0.6rem;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    ul {
+      margin: 0.5rem 0 1.4rem 1.6rem;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      list-style-type: none;
+      position: relative;
+      padding-left: 1.4rem;
+      color: #cbd5e1;
+    }
+
+    li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent-purple);
+      font-weight: bold;
+    }
+
+    .highlight-box {
+      background: var(--bg-elevated);
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.4rem 0 1.8rem 0;
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .badge-safe {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 8px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .highlight-box strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .mode-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.4rem 0 1.8rem 0;
+    }
+
+    @media (max-width: 500px) {
+      .mode-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mode-card {
+      background: var(--bg-elevated);
+      padding: 1.2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s ease;
+    }
+
+    .mode-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .mode-title {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .mode-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .contact-block {
+      background: var(--bg-elevated);
+      padding: 1rem 1.8rem;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 0.8rem 0 0.4rem 0;
+      border: 1px solid var(--border-color);
+      font-weight: 500;
+    }
+
+    .contact-block a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--accent-blue);
+      transition: color 0.2s;
+    }
+
+    .contact-block a:hover {
+      color: #93c5fd;
+      border-bottom: 1px solid #93c5fd;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-note strong {
+      color: #f8fafc;
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .dev-credit {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #64748b;
+    }
+
+  </style>
+</head>
+<body>
+<div class="policy-card">
+
+  <header>
+    <h1>Privacy Policy</h1>
+    <div class="policy-header">
+      <span class="app-badge">♟️ Arrow Maze</span>
+      <span class="last-updated">Updated: October 20, 2026</span>
+    </div>
+  </header>
+
+  <div class="intro-msg">
+    Welcome to <strong>Arrow Maze</strong>, a game developed by <strong>Venticy</strong>. 
+    We believe that solving intricate logic puzzles should be a purely offline, uninterrupted experience. This policy explains how your privacy is handled while you navigate the dense mazes of the game.
+  </div>
+
+  <!-- Zero Data -->
+  <h2>1. Zero Data Collection</h2>
+  <p>Arrow Maze is designed with a "privacy-first" architecture. <strong>We do not collect, store, transmit, or share any personal data or telemetry.</strong></p>
+  <p>The game does not require you to:</p>
+  <ul>
+    <li>Create an account, log in, or authenticate</li>
+    <li>Provide an email address, name, or phone number</li>
+    <li>Grant access to your location, contacts, or device files</li>
+    <li>Submit payment information</li>
+  </ul>
+
+  <div class="highlight-box">
+    <span class="badge-safe">✓ 100% Offline & Private</span>
+    <strong>Everything stays on your device.</strong>
+    Your level progress, unlocked modes, and star counts are saved locally on your device's internal storage. We have no servers, no databases, and no way to view your gameplay.
+  </div>
+
+  <!-- Game Modes -->
+  <h2>2. Gameplay & Data</h2>
+  <p>Arrow Maze features two distinct logic modes, both of which operate entirely locally:</p>
+  
+  <div class="mode-grid">
+    <div class="mode-card">
+      <div class="mode-title">🌀 Classic Mode</div>
+      <div class="mode-desc">The original dense maze. Pure logic. Your progression, level unlocks, and completion status are saved locally.</div>
+    </div>
+    <div class="mode-card">
+      <div class="mode-title">🔐 Twist Mode</div>
+      <div class="mode-desc">Navigate locks, keys, and heavy arrows. Your performance and unlock conditions (e.g., earning stars in Classic) are processed offline.</div>
+    </div>
+  </div>
+  <p>No analytics, tracking pixels, or background data collection are running while you play.</p>
+
+  <!-- Third Party -->
+  <h2>3. Third-Party Services</h2>
+  <p>Arrow Maze does not intentionally integrate with any third-party analytics, advertising networks, or crash reporting services that track personal data.</p>
+  <p>If future updates introduce third-party services (such as an ad network to support development), this Privacy Policy will be updated in advance to explain exactly what data is accessed and how it is handled.</p>
+
+  <!-- App Permissions -->
+  <h2>4. App Permissions</h2>
+  <p>To function correctly, Arrow Maze may request minimal, non-sensitive permissions:</p>
+  <ul>
+    <li><strong>Storage / Media:</strong> Only used locally if the game needs to save your progress or cache level assets to your device.</li>
+  </ul>
+  <p>We do not access your photos, microphone, camera, or contacts.</p>
+
+  <!-- Children -->
+  <h2>5. Children's Privacy</h2>
+  <p>Because Arrow Maze does not collect any personal information, it is safe for users of all ages, including children. We do not knowingly (or unknowingly) collect data from anyone.</p>
+
+  <!-- Changes -->
+  <h2>6. Changes to This Policy</h2>
+  <p>If Arrow Maze receives future features that alter its data practices, this Privacy Policy will be updated. Any changes will be reflected directly on this page with an updated date at the top.</p>
+
+  <!-- Contact -->
+  <h2>7. Contact</h2>
+  <p>If you have questions about the game, need support with a level, or have inquiries regarding this Privacy Policy, you can reach out to the developer:</p>
+  
+  <div class="contact-block">
+    <span>✉️</span>
+    <a href="mailto:venticypvt@gmail.com">venticypvt@gmail.com</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-note">
+    <strong>Arrow Maze</strong>
+    Pure logic. Zero tracking.
+    <div class="dev-credit">Developed by Venticy</div>
+  </div>
+
+</div>
+</body>
+</html>
